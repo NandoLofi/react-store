@@ -1,9 +1,12 @@
 require('dotenv').config();
 const { config } = require('dotenv');
 const express = require('express');
+const { connect } = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3001
-const mogoose = require('mongoose')
+const connectDB = require('./config/database')
+
+connectDB();
 
 
 app.get('/', (req, res)=>{
