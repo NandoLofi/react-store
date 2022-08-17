@@ -1,19 +1,25 @@
+import React from "react"
 import "./App.css"
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Navbar from "./components/Navbar"
+
+import HomeScreen from './screens/HomeScreen'
+import CartScreen from './screens/CartScreen'
+import ProductScreen from './screens/ProductScreen'
 
 function App() {
   return (
     <Router>
-      {/* NaveBar */}
+      <Navbar />
       {/* SideDrawer */}
       {/* Backdrop */}
       <main>
-      <Switch>
-        <Route exact path="/" component={HomeScreen} />
-        <Route exact path="/product/:id/" component={ProductScreen} />
-        <Route exact path="/cart" component={CartScreen} />
+      <Routes>
+        <Route exact path="/" component={<HomeScreen/>} />
+        <Route exact path="/product/:id/" component={<ProductScreen/>} />
+        <Route exact path="/cart" component={<CartScreen/>} />
 
-      </Switch>
+      </Routes>
       </main>
     </Router>
   
