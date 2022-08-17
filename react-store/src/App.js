@@ -1,10 +1,22 @@
-
+import "./App.css"
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <h1>Welcome Home</h1>
-    </div>
+    <Router>
+      {/* NaveBar */}
+      {/* SideDrawer */}
+      {/* Backdrop */}
+      <main>
+      <Switch>
+        <Route exact path="/" component={HomeScreen} />
+        <Route exact path="/product/:id/" component={ProductScreen} />
+        <Route exact path="/cart" component={CartScreen} />
+
+      </Switch>
+      </main>
+    </Router>
+  
   );
 }
 
