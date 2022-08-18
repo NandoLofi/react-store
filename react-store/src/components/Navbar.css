@@ -45,15 +45,14 @@
 .cartlogo__badge {
     width: 30px;
     height: 30px;
-    background: gainsboro;
     border-radius: 50%;
     margin-left: 8px;
-    color: black;
+    color:gainsboro;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 .hamburger__menu {
     width: 30px;

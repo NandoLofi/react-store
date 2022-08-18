@@ -6,7 +6,7 @@ export default function ProductScreen() {
   return (
     <div className='productscreen'>
       <div className="productscreen__left">
-        <div className='lef__image'>
+        <div className='left__image'>
           <img src='https://cdn.shopify.com/s/files/1/0588/8075/3851/products/black.2.png?v=1637980017"' alt='product'/>
         </div>
         <div className="left__info">
@@ -25,6 +25,7 @@ export default function ProductScreen() {
           </p>
           <p>
             Qty
+            
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
