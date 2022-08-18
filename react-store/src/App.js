@@ -1,6 +1,6 @@
 import React from "react"
 import "./App.css"
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import Navbar from "./components/Navbar"
 import { useState } from "react"
 
@@ -14,19 +14,18 @@ function App() {
   const [sideToggle, setSideToggle] = useState(false)
 
   return (
-    <Router>
+    <>
       <Navbar click={()=> setSideToggle(true)}/>
       <Backdrop show={sideToggle} click={()=> setSideToggle(false)}/>
-      <SideDrawer show={sideToggle} />
+      <SideDrawer show={sideToggle} click={()=> setSideToggle(false)}/>
       <main>
       <Routes>
-        <Route exact path="/" component={<HomeScreen/>} />
-        <Route exact path="/product/:id/" component={<ProductScreen/>} />
-        <Route exact path="/cart" component={<CartScreen/>} />
-
+        <Route path="/" element={<HomeScreen/>} />
+        <Route path="/product/:id/" element={<ProductScreen/>} />
+        <Route path="/cart" element={<CartScreen/>} />
       </Routes>
       </main>
-    </Router>
+    </>
   
   );
 }
