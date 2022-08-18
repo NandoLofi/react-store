@@ -6,17 +6,19 @@ export default function Navbar() {
   return (
     <nav className='navbar'>
         {/* logo */}
-        <div className='navbar__log'>
+        <div className='navbar__logo'>
             <h2>MERN Shopping Cart</h2>
         </div>
 
         {/* links */}
         <ul className='navbar__links'>
             <li>
-                <Link to="/cart">
+                <Link to="/cart" className='cart__link'>
                   <i className='fas fa-shopping-cart'> </i>
+                  <span>
                   Cart
-                <span className='cartlogo__badge'>0</span>
+                  <span className='cartlogo__badge'>0</span>
+                  </span>
                 </Link>
             </li>
             <li>
