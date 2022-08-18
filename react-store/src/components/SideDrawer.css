@@ -6,9 +6,9 @@
     top: 0;
     left: 0;
     z-index: 200;
-    transform: translate(-100%);
+    transform: translateX(-100%);
     transition: all 0.3s ease-out;
 }
 .sidedrawer.show {
-    transform: translate(0);
+    transform: translateX(0);
 }

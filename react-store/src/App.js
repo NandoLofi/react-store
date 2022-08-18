@@ -11,14 +11,13 @@ import Backdrop from "./components/Backdrop"
 import SideDrawer from "./components/SideDrawer"
 
 function App() {
-  const [sideToggle, setsideToggle] = useState(false)
-
+  const [sideToggle, setSideToggle] = useState(false)
 
   return (
     <Router>
-      <Navbar />
+      <Navbar click={()=> setSideToggle(true)}/>
+      <Backdrop show={sideToggle} click={()=> setSideToggle(false)}/>
       <SideDrawer show={sideToggle} />
-      <Backdrop show={sideToggle} />
       <main>
       <Routes>
         <Route exact path="/" component={<HomeScreen/>} />
