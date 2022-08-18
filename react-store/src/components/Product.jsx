@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Product() {
   return (
-    <div className='Product'>
+    <div className='product'>
         <img src='https://cdn.shopify.com/s/files/1/0588/8075/3851/products/black.2.png?v=1637980017"' alt="product 1"/>
         <div className="product__info">
             <p className='info__name'>Product 1</p>
