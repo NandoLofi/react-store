@@ -9,12 +9,13 @@ import { getProducts as listProducts} from "../components/redux/actions/productA
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
-  const getProducts = useSelector(state => state.getProducts )
+  const getProducts = useSelector(state => state.reducer.getProducts )
   const { products, loading, error } = getProducts
 
   useEffect(()=> {
+    dispatch(listProducts())
 
-  })
+  }, [dispatch])
 
   return (
     <div className='homescreen'>
